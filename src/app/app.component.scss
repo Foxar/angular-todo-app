@@ -28,15 +28,18 @@
             
         }
         .mat-card-title{
-            padding: 1em;
-            margin: 0;
+            .mat-card{
+                padding: 1em;
+                margin: 0;
+                background-color: $primary-dark;
+            }
         }
         .mat-card-content{
             padding: 2em 2em;
             margin: 0;
             max-height: 60vh;
             overflow-y: scroll;
-            background-color: $primary-dark;
+            background-color: $primary;
         }
         .mat-card-actions{
             padding: 1em;
