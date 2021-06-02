@@ -1,0 +1,5 @@
+@import 'themes.scss';
+$primary: mat-color($app-primary,600);
+$primary-dark: mat-color($app-primary, 800);
+$primary-light: mat-color($app-primary,400);
+$accent: mat-color($app-accent);

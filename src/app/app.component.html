@@ -1,14 +1,16 @@
 <div [className]="'app'">
-  <mat-toolbar>
-    To-Do list
-  </mat-toolbar>
   <div [className]="'appCard'">
     <mat-card>
-      
+      <mat-card-title>
+        Date
+      </mat-card-title>
+
       <mat-card-content>
         <app-task-list></app-task-list>
       </mat-card-content>
-      <mat-card-actions>Buttons</mat-card-actions>
     </mat-card>
+    <button mat-fab>
+        <mat-icon aria-hidden="false" aria-label="Add icon">add</mat-icon>
+      </button>
   </div>
 </div>
