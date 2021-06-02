@@ -1,9 +1,14 @@
-<div [className]="'appCard'">
-  <mat-card>
-    <mat-card-title>To-Do list</mat-card-title>
-    <mat-card-content>
-      <app-task-list></app-task-list>
-    </mat-card-content>
-    <mat-card-actions>Buttons</mat-card-actions>
-  </mat-card>
+<div [className]="'app'">
+  <mat-toolbar>
+    To-Do list
+  </mat-toolbar>
+  <div [className]="'appCard'">
+    <mat-card>
+      
+      <mat-card-content>
+        <app-task-list></app-task-list>
+      </mat-card-content>
+      <mat-card-actions>Buttons</mat-card-actions>
+    </mat-card>
+  </div>
 </div>
