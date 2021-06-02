@@ -1,0 +1,12 @@
+<mat-card className="task">
+    <h3>{{taskContent.title}}</h3>
+    <p>{{taskContent.description}}</p>
+    <p>Added: {{
+        ''+(taskContent.dateAdded[0])
+        +('/')
+        +(taskContent.dateAdded[1])
+        +('/')
+        +(taskContent.dateAdded[2])
+    }}
+    </p>
+</mat-card>
