@@ -6,6 +6,16 @@
     }
     .appCard
     {
+        mat-card-title{
+            
+            
+            mat-card{
+                .date{
+
+                    display:inline-block;
+                }
+            }
+        }
         margin: 4em auto;
         width: 35%;
         position: relative;
