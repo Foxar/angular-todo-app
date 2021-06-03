@@ -20,6 +20,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { DateHeaderComponent } from './date-header/date-header.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     TaskComponent,
     TaskMenuComponent,
     AddTaskDialogComponent,
+    DateHeaderComponent,
   ],
   imports: [
     BrowserModule,

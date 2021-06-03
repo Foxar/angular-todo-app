@@ -11,7 +11,7 @@ export class TaskService {
 
   constructor(private httpClient:HttpClient) { }
 
-  getTasks(): Observable<Task[]>{
-    return this.httpClient.get<Task[]>(this.tasksEndpoint);
+  getTasks(selectedDate: Date): Observable<Task[]>{
+    return this.httpClient.get<Task[]>(this.tasksEndpoint.concat("?dateAdded=" + selectedDate.toDateString()));
   }
 }

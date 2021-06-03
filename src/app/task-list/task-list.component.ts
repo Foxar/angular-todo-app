@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {Task} from '../task';
 import {TaskService} from '../services/task.service';
 
@@ -9,14 +9,19 @@ import {TaskService} from '../services/task.service';
 })
 export class TaskListComponent implements OnInit {
 
+  @Input() selectedDate!: Date;
   taskArray: Task[] = [];
 
   constructor(private taskService: TaskService) { }
 
-  ngOnInit(): void {
-    this.taskService.getTasks().subscribe((tasks)=>{
+  ngOnChanges(): void{
+    console.log("Calling taskservice");
+    this.taskService.getTasks(this.selectedDate).subscribe((tasks)=>{
       this.taskArray = tasks;
     })
+  }
+  ngOnInit(): void {
+    
     
   }
 
