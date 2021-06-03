@@ -9,7 +9,12 @@ import {AddTaskDialogComponent} from '../add-task-dialog/add-task-dialog.compone
 })
 export class TodoCardComponent implements OnInit {
 
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog) 
+  { 
+    this.selectedDate = new Date();
+  }
+  
+  selectedDate: Date;
 
   addTaskOpen()
   {
@@ -25,6 +30,7 @@ export class TodoCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
   }
 
 }
