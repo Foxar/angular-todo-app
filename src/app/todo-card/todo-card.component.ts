@@ -14,7 +14,10 @@ export class TodoCardComponent implements OnInit {
   addTaskOpen()
   {
     console.log("addTaskOpen()");
-    const dialogRef = this.dialog.open(AddTaskDialogComponent);
+    const dialogRef = this.dialog.open(AddTaskDialogComponent, {
+      width: '30%',
+      maxWidth: 'none'
+    });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(result);

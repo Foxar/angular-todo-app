@@ -17,7 +17,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AddTaskDialogComponent } from './add-task-dialog/add-task-dialog.component';
 import { TodoCardComponent } from './todo-card/todo-card.component';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatIconModule,
     MatMenuModule,
     MatCheckboxModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
