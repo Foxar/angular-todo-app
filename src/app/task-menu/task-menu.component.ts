@@ -12,7 +12,7 @@ export class TaskMenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClick(){
+  onDelete(){
     console.log("Placeholder behavior for delete button");
   }
 

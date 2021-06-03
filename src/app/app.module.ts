@@ -14,14 +14,19 @@ import { TaskComponent } from './task/task.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { TaskMenuComponent } from './task-menu/task-menu.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { AddTaskDialogComponent } from './add-task-dialog/add-task-dialog.component';
+import { TodoCardComponent } from './todo-card/todo-card.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    TodoCardComponent,
     TaskListComponent,
     TaskComponent,
-    TaskMenuComponent
+    TaskMenuComponent,
+    AddTaskDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
