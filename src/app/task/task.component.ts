@@ -8,10 +8,18 @@ import { Task } from '../task';
 })
 export class TaskComponent implements OnInit {
   @Input() taskContent!: Task;
+  checked: boolean;
 
-  constructor() { }
+  constructor() {
+    this.checked=false;
+   }
 
   ngOnInit(): void {
+  }
+
+  changeCheck(checked: boolean): void{
+    console.log(checked);
+    this.checked=checked;
   }
 
 }

@@ -1,7 +1,7 @@
 <mat-card [className]="'task'">
     <div [className]="'content'">
-        <mat-checkbox></mat-checkbox>
-        <p>{{taskContent.content}}</p>
+        <mat-checkbox (change)="changeCheck($event.checked)"></mat-checkbox>
+        <p [className]="this.checked?'crossedout':''">{{taskContent.content}}</p>
         <task-menu></task-menu>
     </div>
     
