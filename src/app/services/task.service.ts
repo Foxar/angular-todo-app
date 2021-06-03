@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {TestTasks} from '../test-tasks';
 import {Task} from '../task';
 
@@ -7,11 +8,11 @@ import {Task} from '../task';
   providedIn: 'root'
 })
 export class TaskService {
+  private tasksEndpoint = 'http://localhost:3000/tasks';
 
-  constructor() { }
+  constructor(private httpClient:HttpClient) { }
 
   getTasks(): Observable<Task[]>{
-    const tasks = of(TestTasks);
-    return tasks;
+    return this.httpClient.get<Task[]>(this.tasksEndpoint);
   }
 }
