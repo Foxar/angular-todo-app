@@ -12,4 +12,8 @@ export class TaskMenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onClick(){
+    console.log("Placeholder behavior for delete button");
+  }
+
 }
