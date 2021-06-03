@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-date-header',
   templateUrl: './date-header.component.html',
   styleUrls: ['./date-header.component.scss']
 })
-export class DateHeaderComponent implements OnInit {
+export class DateHeaderComponent implements OnInit, OnChanges {
 
   constructor() { }
   @Input() selectedDate!: Date;
@@ -15,11 +15,17 @@ export class DateHeaderComponent implements OnInit {
   decDate(){this.changeDate(-1);}
 
   changeDate(c: number){
-    this.selectedDate.setDate(this.selectedDate.getDate() + c);
+    console.log("Changing date");
+    const newDate = new Date()
+    newDate.setDate(this.selectedDate.getDate() + c);
+    this.selectedDate = newDate;
     this.selectedDateChange.emit(this.selectedDate);
   }
 
   ngOnInit(): void {
   }
 
+  ngOnChanges(): void{
+    console.log(this.selectedDate);
+  }
 }
