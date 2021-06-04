@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnChanges } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {AddTaskDialogComponent} from '../add-task-dialog/add-task-dialog.component';
 
@@ -7,7 +7,7 @@ import {AddTaskDialogComponent} from '../add-task-dialog/add-task-dialog.compone
   templateUrl: './todo-card.component.html',
   styleUrls: ['./todo-card.component.scss']
 })
-export class TodoCardComponent implements OnInit, OnChanges {
+export class TodoCardComponent implements OnChanges {
 
   constructor(private dialog: MatDialog) 
   { 
@@ -32,8 +32,5 @@ export class TodoCardComponent implements OnInit, OnChanges {
     });
   }
 
-  ngOnInit(): void {
-
-  }
 
 }

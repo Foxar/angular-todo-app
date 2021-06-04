@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Task } from '../task';
 
 @Component({
@@ -6,16 +6,13 @@ import { Task } from '../task';
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.scss']
 })
-export class TaskComponent implements OnInit {
+export class TaskComponent {
   @Input() taskContent!: Task;
   checked: boolean;
 
   constructor() {
     this.checked=false;
    }
-
-  ngOnInit(): void {
-  }
 
   changeCheck(checked: boolean): void{
     console.log(checked);

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {Task} from '../task';
 import {TaskService} from '../services/task.service';
 
@@ -7,7 +7,7 @@ import {TaskService} from '../services/task.service';
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.scss']
 })
-export class TaskListComponent implements OnInit {
+export class TaskListComponent {
 
   @Input() selectedDate!: Date;
   taskArray: Task[] = [];
@@ -19,10 +19,6 @@ export class TaskListComponent implements OnInit {
     this.taskService.getTasks(this.selectedDate).subscribe((tasks)=>{
       this.taskArray = tasks;
     })
-  }
-  ngOnInit(): void {
-    
-    
   }
 
 }
