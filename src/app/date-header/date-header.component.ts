@@ -15,8 +15,7 @@ export class DateHeaderComponent {
   decDate(){this.changeDate(-1);}
 
   changeDate(c: number){
-    console.log("Changing date");
-    const newDate = new Date()
+    let newDate = new Date(this.selectedDate.getTime());
     newDate.setDate(this.selectedDate.getDate() + c);
     this.selectedDate = newDate;
     this.selectedDateChange.emit(this.selectedDate);
