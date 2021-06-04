@@ -1,7 +1,7 @@
 <mat-card [className]="'task'">
     <div [className]="'content'">
-        <mat-checkbox (change)="changeCheck($event.checked)"></mat-checkbox>
-        <p [className]="this.checked?'crossedout':''">{{taskContent.content}}</p>
+        <mat-checkbox (change)="changeCheck($event.checked)" [(ngModel)]="taskContent.checked" ></mat-checkbox>
+        <p [className]="this.taskContent.checked?'crossedout':''">{{taskContent.content}}</p>
         <task-menu [task]="this.taskContent"></task-menu>
     </div>
     
