@@ -30,4 +30,11 @@ export class TaskService {
   submitTask(task: Task): Observable<Task>{
     return this.httpClient.post<Task>(this.tasksEndpoint,task, this.httpOptions);
   }
+
+  deleteTask(task: Task): Observable<Task>{
+    console.log("Deleting task in service");
+    console.log(task);
+    console.log(this.tasksEndpoint.concat("/") + task.id);
+    return this.httpClient.delete<Task>(this.tasksEndpoint.concat("/") + task.id, this.httpOptions);
+  }
 }
