@@ -1,10 +1,9 @@
 <div [className]="'new-task-dialog'">
-    <form #taskForm="ngForm">
+    <form #taskForm="ngForm" (ngSubmit)="onSubmit()">
         <p>Add a new task!</p>
         <mat-form-field appearance="fill">
-            <input matInput [(ngModel)]="model.content" name="content">
+            <input matInput [(ngModel)]="model.content" name="content" required>
         </mat-form-field>
-        <button mat-raised-button>Submit</button>
-        {{model | json}}
+        <button mat-raised-button [disabled]="!taskForm.form.valid">Submit</button>
     </form>
 </div>
