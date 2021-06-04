@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { TaskComponent } from '../task/task.component';
+import { TaskService } from '../services/task.service';
 import {Task} from '../task';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 
@@ -10,7 +10,7 @@ import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 })
 export class AddTaskDialogComponent implements OnInit {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: {date: Date}) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: {date: Date}, private taskService: TaskService) { }
     date: Date = this.data.date;
 
     submitted = false;
@@ -30,5 +30,10 @@ export class AddTaskDialogComponent implements OnInit {
     }
     onSubmit(){
       this.submitted = true;
+      console.log("submitting new one");
+      this.taskService.submitTask(this.model).subscribe((task)=>{
+        console.log("Returned" + task);
+      })
+      
     }
 }
