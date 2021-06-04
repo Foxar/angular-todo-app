@@ -2,7 +2,7 @@
     <div [className]="'content'">
         <mat-checkbox (change)="changeCheck($event.checked)"></mat-checkbox>
         <p [className]="this.checked?'crossedout':''">{{taskContent.content}}</p>
-        <task-menu></task-menu>
+        <task-menu [task]="this.taskContent"></task-menu>
     </div>
     
 
