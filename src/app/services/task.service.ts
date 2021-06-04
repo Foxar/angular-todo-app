@@ -37,4 +37,10 @@ export class TaskService {
     console.log(this.tasksEndpoint.concat("/") + task.id);
     return this.httpClient.delete<Task>(this.tasksEndpoint.concat("/") + task.id, this.httpOptions);
   }
+
+  updateTask(task: Task): Observable<Task>{
+    console.log("UpdateTask()");
+    console.log(task);
+    return this.httpClient.put<Task>(this.tasksEndpoint.concat("/")+task.id,task, this.httpOptions)
+  }
 }
