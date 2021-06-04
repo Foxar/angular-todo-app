@@ -1,0 +1,57 @@
+@import '../../variables';
+
+:host{
+    mat-toolbar{
+        background-color: $primary;
+    }
+    .appCard
+    {
+        margin: 4em auto;
+        width: 35%;
+        position: relative;
+        .mat-card{
+            overflow-y: hidden;
+            overflow-x: hidden;
+            padding: 0;
+            background-color: $primary;
+            
+        }
+        .mat-card-title{
+            .mat-card{
+                padding: 1em;
+                margin: 0;
+                background-color: $primary-dark;
+            }
+        }
+        .mat-card-content{
+            padding: 2em 2em;
+            margin: 0;
+            max-height: 60vh;
+            overflow-y: scroll;
+            background-color: $primary;
+        }
+        .mat-card-actions{
+            padding: 1em;
+            margin-top:0;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .buttonSpan{
+            button{
+                $buttonSize: 4em;
+                width: $buttonSize;
+                height: $buttonSize;
+                position: absolute;
+                bottom: -32px;
+                left: 50%;
+                right: 50%;
+                margin-left: -$buttonSize/2;
+                background-color: $accent;
+            }
+        }
+        
+    }
+}

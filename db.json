@@ -1,0 +1,22 @@
+{
+    "tasks": [
+        {
+            "id": 1,
+            "content": "There's a complicated assignment for Mr. Johson",
+            "dateAdded": "Thu Jun 03 2021",
+            "checked": false
+        },
+        {
+            "id": 2,
+            "content": "Don't forget to water the plants!",
+            "dateAdded": "Thu Jun 03 2021",
+            "checked": true
+        },
+        {
+            "id": 3,
+            "content": "Remember to buy a birthday present for Jack",
+            "dateAdded": "Thu Jun 03 2021",
+            "checked": false
+        }
+    ]
+}

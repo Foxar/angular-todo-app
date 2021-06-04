@@ -1,0 +1,11 @@
+<div class="date">
+    <button  mat-icon-button (click)="decDate()">
+      <mat-icon aria-hidden="false" aria-label="Next day">navigate_before</mat-icon>
+    </button>
+    <div class="dateText">
+      {{selectedDate.toDateString()}}
+    </div>
+    <button  mat-icon-button (click)="incDate()">
+      <mat-icon aria-hidden="false" aria-label="Next day">navigate_next</mat-icon>
+    </button>
+  </div>

@@ -1,19 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import {TestTasks} from '../test-tasks';
+import { Component, Input } from '@angular/core';
 import {Task} from '../task';
+import {TaskService} from '../services/task.service';
 
 @Component({
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.scss']
 })
-export class TaskListComponent implements OnInit {
+export class TaskListComponent {
 
-  taskArray: Task[] = TestTasks;
+  @Input() selectedDate!: Date;
+  taskArray: Task[] = [];
 
-  constructor() { }
+  constructor(private taskService: TaskService) { }
 
-  ngOnInit(): void {
+  ngOnChanges(): void{
+    console.log("Calling taskservice");
+    this.taskService.getTasks(this.selectedDate).subscribe((tasks)=>{
+      this.taskArray = tasks;
+    })
   }
 
 }
