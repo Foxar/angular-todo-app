@@ -1,9 +1,10 @@
 <div [className]="'new-task-dialog'">
-    <form>
+    <form #taskForm="ngForm">
         <p>Add a new task!</p>
         <mat-form-field appearance="fill">
-            <input matInput>
+            <input matInput [(ngModel)]="model.content" name="content">
         </mat-form-field>
         <button mat-raised-button>Submit</button>
+        {{model | json}}
     </form>
 </div>

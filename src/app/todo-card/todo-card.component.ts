@@ -24,7 +24,8 @@ export class TodoCardComponent implements OnChanges {
     console.log("addTaskOpen()");
     const dialogRef = this.dialog.open(AddTaskDialogComponent, {
       width: '30%',
-      maxWidth: 'none'
+      maxWidth: 'none',
+      data: {date: this.selectedDate}
     });
 
     dialogRef.afterClosed().subscribe(result => {
