@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Task } from '../task';
+import { TaskService } from '../services/task.service';
 
 @Component({
   selector: 'app-task',
@@ -8,15 +9,13 @@ import { Task } from '../task';
 })
 export class TaskComponent {
   @Input() taskContent!: Task;
-  checked: boolean;
 
-  constructor() {
-    this.checked=false;
-   }
+  constructor(private taskService: TaskService) {}
 
   changeCheck(checked: boolean): void{
     console.log(checked);
-    this.checked=checked;
+    this.taskContent.checked=checked;
+    this.taskService.updateTask(this.taskContent).subscribe();
   }
 
 }
